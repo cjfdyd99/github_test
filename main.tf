@@ -17,6 +17,7 @@ resource "aws_instance" "app_server" {
   ami           = "ami-0bbc954141b39fb71"
   instance_type = "t2.micro"
   subnet_id = "subnet-02db9680568fe55ec"
+  vpc_security_group_ids = ["sg-08397feb97a4ff549"]
 
   tags = {
     Name = "Terraform_Test_EC2"
